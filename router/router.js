@@ -104,11 +104,6 @@ router.get('/checkrecord',teacherAuthorized,checkRecord);
 
 
 
-
-// extra
-// router.get('/',function(req,res){
-//     res.render('admin/layout/app');
-// });
 router.get('/data',function(req,res){
     res.render('admin/manage_student_data');
 });
