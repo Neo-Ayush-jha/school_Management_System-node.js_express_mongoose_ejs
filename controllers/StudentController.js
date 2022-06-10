@@ -159,7 +159,7 @@ function ragristration_class(req,res){
     });
     student.save();
     console.log(req.body.course_id)
-    res.redirect('/school');
+    res.redirect('/');
     // console.log(applyStudent);
 }
      
@@ -189,7 +189,7 @@ function ragristration_class(req,res){
             }catch(error){
                 console.log(error);
             }
-            res.redirect("/school");
+            res.redirect("/");
         }
     }
  // ===============================================landin page of student End====================================================================

@@ -66,9 +66,9 @@ router.get('/student/notification',studentAuthorized  , notice);
 
 // router.get("/student/course/manage",studentAuthorized,manageStudentClass);------>>>>*****+****>>>>important find----------->
 router.get("/student/applyform",applyform);
-router.get("/school",ragristration);
+router.get("/",ragristration);
 router.post("/student/applyform",upload.single('image'),applyStudent.insert);
-router.post("/school",upload.single('image'),registerStudent.insert);
+router.post("/",upload.single('image'),registerStudent.insert);
 router.post("/class",upload.single("image"),ragristration_for_class);
 router.get("/class",ragristration_for_class);
 
@@ -106,9 +106,9 @@ router.get('/checkrecord',teacherAuthorized,checkRecord);
 
 
 // extra
-router.get('/',function(req,res){
-    res.render('admin/layout/app');
-});
+// router.get('/',function(req,res){
+//     res.render('admin/layout/app');
+// });
 router.get('/data',function(req,res){
     res.render('admin/manage_student_data');
 });
@@ -121,7 +121,7 @@ router.get('/base',function(req,res){
 router.get('/rcp',function(req,res){
     res.render('teacher/student_reportcard');
 });
-router.get('/school',function(req,res){
+router.get('/',function(req,res){
     res.render('student/landinPage');
 });
 router.get('/gallery',function(req,res){
