@@ -67,4 +67,7 @@ app.set("view engine","ejs")
 app.use('/static',express.static(path.join(__dirname, 'public')));
 app.use(expressLayouts);
 app.use(require('ejs-yield'));
-app.listen(8080);
+const port = process.env.PORT || 8080;
+app.listen(port,()=>{
+    console.log('hii student');
+});
