@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('./layout/common/header.ejs') %>
+            <%- include('./layout/common/nav.ejs') %>
+                <div class="content-wrapper">
+
+
+
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Course form class</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <!-- <div class="row "> -->
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label for="">Course name</label>
+                                            <input type="text" placeholder="Course name" name="Course_name" class="form-control">
+                                        </div>
+                                        <div class="mb-3 col">
+                                            <label for="">Class Teacher</label>
+                                            <select name="teacher_id" , id="" class="form-control">
+                                              <% teacher.forEach(val=>{ %>
+                                                <!-- <td><%=val.address %></td> -->
+                                                <option value="<%= val._id  %>">
+                                                  <%=val.t_name %>
+                                                </option>
+                                                <% }); %>
+                                            </select>
+                          
+                                          </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="">Price</label>
+                                                <input type="number" class="form-control" name="price" id="exampleInputEmail1">
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="">age_student</label>
+                                                <input type="number" , name="age_student" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Class Admission fee">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="">course 1</label>
+                                                <input type="text" class="form-control" name="course_1" id="exampleInputEmail1">
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="">course 2</label>
+                                                <input type="text" , name="course_2" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Class Admission fee">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="">course 3</label>
+                                                <input type="text" class="form-control" name="course_3" id="exampleInputEmail1">
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="">course 4</label>
+                                                <input type="text" , name="course_4" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Class Admission fee">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="">course 5</label>
+                                                <input type="text" class="form-control" name="course_5" id="exampleInputEmail1">
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="">course 6</label>
+                                                <input type="text" , name="course_6" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Class Admission fee">
+                                            </div>
+                                        </div>
+                                        <!-- /.form-group -->
+                                        
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label for="">enter</label>
+                                            <input type="submit" , name="submit" class="btn btn-success w-100">
+                                        </div>
+                                        <!-- /.form-group -->
+                                       
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+
+                               
+                                
+                               
+                                <!-- /.col -->
+
+                                <!-- /.row -->
+                            </form>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and
+                            information about
+                            the plugin.
+                        </div>
+                    </div>
+                </div>
+                <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+
+</html>

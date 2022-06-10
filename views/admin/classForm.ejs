@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('./layout/common/header.ejs') %>
+            <%- include('./layout/common/nav.ejs') %>
+
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <div class="container-fluid">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h1>General Form</h1>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-sm-right">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active">General Form</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div><!-- /.container-fluid -->
+                    </section>
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- left column -->
+                                <div class="col-md-10">
+                                    <!-- general form elements -->
+                                    <div class="card shadow card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Class fee Entery</h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <!-- form start -->
+                                        <form action="" method="post">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="form-group col">
+                                                        <label for="">Class name</label>
+                                                        <input type="text" class="form-control" name="class_name" id="exampleInputEmail1"
+                                                            placeholder="Class name">
+                                                    </div>
+                                                    <div class="form-group col">
+                                                        <label for="">Class Admission fee</label>
+                                                        <input type="number" , name="class_admission_fee" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="Class Admission fee">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col">
+                                                        <label for="">Class Readmission fee</label>
+                                                        <input type="number" , name="class_readmission_fee"  class="form-control"
+                                                            id="exampleInputPassword1" placeholder="Class Admission fee">
+                                                    </div>
+                                                    <div class="form-group col">
+                                                        <label for="">Class Monthly fee</label>
+                                                        <input type="number" , name="class_monthly_fee" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="Class Monthly fee">
+                                                    </div>
+                                                </div>
+                                               <div class="row">
+                                                <div class="form-group col">
+                                                    <label for="">Class Extera fee</label>
+                                                    <input type="number" , name="class_extera_charges"  class="form-control"
+                                                        id="exampleInputPassword1" placeholder="Class Extera fee">
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="">Class Books fee</label>
+                                                    <input type="number" , name="class_books_fee" class="form-control"
+                                                        id="exampleInputPassword1" placeholder="Class Books fee">
+                                                </div>
+                                               </div>
+                                                
+                                                
+                                                
+                                            
+                                            </div>
+                                            <!-- /.card-body -->
+
+                                            <div class="card-footer ">
+                                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.card -->
+                                    
+                                    <!-- /.card -->
+
+                                </div>
+                                <!--/.col (left) -->
+                                <!-- right column -->
+                                
+
+                                   
+                                                <!-- input states -->
+                                                
+
+                                                
+
+                                               
+
+                                                
+                                                <div class="form-group">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                                <!--/.col (right) -->
+                            </div>
+                            <!-- /.row -->
+                        </div><!-- /.container-fluid -->
+                    </section>
+                    <!-- /.content -->
+                </div>
+
+    </div>
+    <%- include('./layout/common/footer.ejs') %>
+        </div>
+        <%- include('./layout/common/downlink.ejs') %>
+</body>
+
+</html>

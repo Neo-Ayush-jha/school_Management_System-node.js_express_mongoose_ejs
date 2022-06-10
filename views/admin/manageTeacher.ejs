@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('./layout/common/header.ejs') %>
+        <%- include('./layout/common/nav.ejs') %>
+        <div class="content-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">DataTable with default features</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped small">
+                <thead>
+                  <th>Teacher name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Course</th>
+                  <th>Mobile</th>
+                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% teacher.forEach(val=>{ %>
+                <tr>
+                  <td><%=val.t_name %> </td>
+                  <td><%=val.t_age %></td>
+                  <td><%=val.t_gender %></td>
+                  <td><%=val.course_id.Course_name%></td>
+                  <td><%=val.t_mobile %></td>
+                  <td><%=val.t_salary %></td>
+                  <td><%=val.t_email %></td>
+                  <td><%=val.t_address %></td>
+                  <td>
+                      <a href="/admin/edit-teacher/<%=val._id %>" class="btn btn-danger">Edit</a>
+                  </td>
+                </tr>
+                <% }); %> 
+                </tbody>
+                
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+       </div>
+       <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+</html>
+
+

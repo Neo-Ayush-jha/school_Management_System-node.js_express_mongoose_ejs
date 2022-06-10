@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('../admin/layout/common/header.ejs') %>
+            <%- include('../admin/layout/common/student_nav.ejs') %>
+                <div class="content-wrapper">
+                    <div class="row ">
+                        <div class="col-8    mx-auto">
+                            <div class="card shadow mt-3">
+                                <div class="card-header">
+                                    <h3 class="card-title "> <%= MonthlyFee[0].student_id.first_name %>  <%= MonthlyFee[0].student_id.last_name %> Detals</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped ">
+                                        <tr>
+                                            <th>Student  img</th>
+                                            <td >
+                                                <img src="/<%= MonthlyFee[0].student_id.image %>" height="50" alt="">
+                                                <!-- <%= MonthlyFee[0].student_id.image %> -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th >Student  name</th>
+                                            <td>
+                                                <%= MonthlyFee[0].student_id.first_name %> <%= MonthlyFee[0].student_id.last_name %> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Father name</th>
+                                            <td>
+                                                <%= MonthlyFee[0].student_id.father_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student mother name</th>
+                                            <td>
+                                                <%= MonthlyFee[0].student_id.mother_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student class name</th>
+                                            <td>
+                                                <%= MonthlyFee[0].course_id.Course_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student DOB</th>
+                                            <td>
+                                                <%= MonthlyFee[0].student_id.dob %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student gender</th>
+                                            <td>
+                                                <%= MonthlyFee[0].student_id.gender %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student date of joining</th>
+                                            <td>
+                                                <%= MonthlyFee[0].date     %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student Monthly payment</th>
+                                            <td>
+                                                ₹ <%= MonthlyFee[0].course_id.price %>
+                                            </td>
+        
+                                        </tr>
+                                        <tr><th></th><td><a href="" class="btn border border-danger ">Payment</a></td></tr>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    <%- include('../admin/layout/common/footer.ejs') %>
+        </div>
+        <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+
+</html>

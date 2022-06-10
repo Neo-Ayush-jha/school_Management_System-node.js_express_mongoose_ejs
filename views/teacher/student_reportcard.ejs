@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('../admin/layout/common/header.ejs') %>
+      <%- include('../admin/layout/common/teacher_nav.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>General Form</h1>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">General Form</li>
+                  </ol>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- left column -->
+                <div class="col-md-10 mx-auto">
+                  <!-- general form elements -->
+                  <div class="card shadow card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Apply form or Admission From for students</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form action="" method="post">
+                      <div class="card-body">
+                        <div class="row">
+
+                          <div class="form-group col">
+                            <label for="">First Name</label>
+                            <input type="text" , name="first_name" , value="<%=students[0].first_name %>"
+                              class="form-control" readonly>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">Father Name</label>
+                            <input type="text" , name="father_name" , value="<%= students[0].father_name %>"
+                              class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Last Name</label>
+                            <input type="text" , name="last_name" , value="<%=students[0].last_name %>"
+                              class="form-control" readonly>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">Mother Name</label>
+                            <input type="text" , name="mother_name" , value="<%= students[0].mother_name %>"
+                              class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="">address</label>
+                              <input type="text" , name="address" , value="<%= students[0].address %>"
+                                class="form-control" readonly>
+                            </div>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">DOB</label>
+                            <input type="text" , name="dob" , value="<%= students[0].dob %>" class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">gender</label>
+                            <input type="text" , name="gender" value="<%= students[0].gender %>" class="form-control" readonly>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">class</label>
+                            <input type="text" , name="class" , value="<%= students[0].course_id.Course_name%>" class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">mobile</label>
+                            <input type="number" , name="mobile" , value="<%= students[0].mobile %>"
+                              class="form-control" readonly>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">email</label>
+                            <input type="email" , name="email" , value="<%= students[0].email %>" class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">status</label>
+                            <input type="status" , name="status" , value="<%= students[0].status %>"
+                              class="form-control" readonly>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">roll</label>
+                            <input type="roll" , name="roll" , value="<%= students[0].roll %>" class="form-control" readonly>
+                          </div>
+                        </div>
+                        <div class="row">
+                         
+                        </div>
+                        <h3 class="fs-2 border-bottom py-2 my-3">Student Reportcard</h3>
+<!------------------------------ ---result------------------------------------------------- -->
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Maths</label>
+                            <input type="number" , name="paper_1" , value="<%= students[0].paper_1 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">Science</label>
+                            <input type="number" , name="paper_2" , value="<%= students[0].paper_2 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+
+                          <div class="form-group col">
+                            <label for="">SSt</label>
+                            <input type="number" , name="paper_3" , value="<%= students[0].paper_3 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">English</label>
+                            <input type="number" , name="paper_4" , value="<%= students[0].paper_4 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+
+                          <div class="form-group col">
+                            <label for="">Hindi</label>
+                            <input type="number" , name="paper_5" , value="<%= students[0].paper_5 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">Computer</label>
+                            <input type="number" , name="paper_6" , value="<%= students[0].paper_6 %>" , class="form-control"  id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+                        </div>
+                        <!------------------------------ ---result------------------------------------------------- -->
+                      </div>
+
+
+
+                      <!-- /.card-body -->
+
+                      <div class="card-footer ">
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card -->
+
+                  <!-- /.card -->
+
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+
+
+
+                <!-- input states -->
+
+
+
+
+
+
+
+                <div class="form-group">
+                </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) -->
+  </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+
+  </div>
+  <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('../admin/layout/common/header.ejs') %>
+        <%- include('../admin/layout/common/teacher_nav.ejs') %>
+        <div class="content-wrapper">
+         
+            <!-- <div class="content-wrapper"> -->
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                  <div class="container-fluid">
+                    <div class="row mb-2">
+                      <div class="col-sm-6 mx-auto">
+                        <h1>Project Detail</h1>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active">Class Notifications</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div><!-- /.container-fluid -->
+                </section>
+            
+                <!-- Main content -->
+                <section class="content">
+            
+                  <!-- Default box -->
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Notifications</h3>
+            
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                          <div class="row">
+                            <div class="col-12 col-sm-4">
+                              <div class="info-box bg-light">
+                                <div class="info-box-content">
+                                  <span class="info-box-text text-center text-muted">Total Teachers</span>
+                                  <span class="info-box-number text-center text-muted mb-0">230</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                              <div class="info-box bg-light">
+                                <div class="info-box-content">
+                                  <span class="info-box-text text-center text-muted">Total Students</span>
+                                  <span class="info-box-number text-center text-muted mb-0">2000</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                              <div class="info-box bg-light">
+                                <div class="info-box-content">
+                                  <span class="info-box-text text-center text-muted">Total Employ</span>
+                                  <span class="info-box-number text-center text-muted mb-0">20</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <h4>Recent Notice</h4>
+                              <% notification.forEach(val=>{ %>
+                                <div class="card">
+                                  <div class="card-body">
+                                    <!-- <div class="post"> -->
+                                      <div class="user-block">
+                                        <img class="img-circle img-bordered-sm" src="https://tse2.mm.bing.net/th?id=OIP.veQLWaxIFTnvPOdD0pcEkQHaEK&pid=Api&P=0&w=338&h=190" alt="user image">
+                                        <span class="username">
+                                          <a href="#"><%= val.teacher_id.t_name %></a>
+                                        </span>
+                                        <span class="description">Shared publicly - <%= val.date %></span>
+                                      </div>
+                                      <!-- /.user-block -->
+                                      
+                                      <p class="mt-5"> 
+                                        <%= val.notice %>
+                                       
+                                      </p>
+                                   
+                                      <p>
+                                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Dem  o File 1 v2</a>
+                                      </p>
+                                    <!-- </div> -->
+                                  </div>
+                                </div>
+            
+                                <% }); %>
+                                
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                          <h4 class="text-primary"><i class="fas fa-paint-brush"></i> GuruKul MahaVidyale</h4>
+                          <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+                          <br>
+                          <div class="text-muted">
+                            <p class="text-sm">Client Company
+                              <b class="d-block">Ayush Jha</b>
+                            </p>
+                            <p class="text-sm">Project Leader
+                              <b class="d-block">Sadiqe Sir </b>
+                            </p>
+                          </div>
+            
+                          <h5 class="mt-5 text-muted">Project files</h5>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
+                            </li>
+                            <li>
+                              <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
+                            </li>
+                            <li>
+                              <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
+                            </li>
+                            <li>
+                              <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
+                            </li>
+                            <li>
+                              <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
+                            </li>
+                          </ul>
+                          <div class="text-center mt-5 mb-3">
+                            <a href="/teacher/notificationForm" class="btn btn-sm btn-primary">Add notice</a>
+                            <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+            
+                </section>
+                <!-- /.content -->
+              </div>
+              <!-- /.content-wrapper -->
+            
+              
+            
+       </div>
+       <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+</html>
+
+

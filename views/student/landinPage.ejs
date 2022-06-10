@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>||GuruKul-MahaVidiyaly|| </title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <%- include('../admin/layout/common/link.ejs')%>
+        <!-- bootstrap icon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body style="background-color: #eee;">
+    <!-- Navbar Start -->
+    <%- include('navbar.ejs') %>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <div class="container-fluid  px-0 px-md-5 mb-5"
+        style="height: 630px;background-color: #17a2b8 !important;font-family: Handlee, cursive;">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white  fs-3 fw-bold " style="margin-top:80px; text-shadow:3px 3px rgb(118, 118, 118)">Kids Learning Center</h4>
+                <h1 class="display-3 font-weight-bold text-white " style="text-shadow:5px 5px rgb(118, 118, 118)">New Approach to Kids Education</h1>
+                <p class="text-white fs-5   ">"Education is the manifestation of present already in man. Divinity is the
+                    manifestation of the religion already in man."</p>
+                <p class="display-7 font-weight-bold text-white text-end me-5 fs-4 " style="text-shadow:2.5px 2.5px rgb(118, 118, 118)">~ Swami Vivekananda ~</p>
+                <a href="/about" class="btn font-weight-bold  mt-1 py-3 px-5"
+                    style="color: #fff;border-color: #00394f;border-radius: 45px;background-color: #00394f;">Learn
+                    More</a>
+            </div>
+            <div class="col-lg-6 text-center mt-5 text-lg-right">
+                <!-- <img class="img-fluid  rounded " src="../images/header.png" style="height: 485px;" alt=""> -->
+                <!-- <img src="../images/homegif.svg"  style="width: 100%;height: 500px; animation-delay: 0ms;"> -->
+                <img src="../images/high-school-animate.svg"  style="width: 100%;height: 500px; animation-delay: 0ms;">
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Facilities Start -->
+    <div class="container-fluid pt-5 mt-5">
+        <div class="container pb-3">
+            <div class="row my-1">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-dribbble fs-1  font-weight-normal text-primary mb-3"
+                            style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class=" font-weight-bold " style="font-family: Handlee, cursive;">Play Ground</h4>
+                            <p class="m-0  text-muted">Let us remember: One book, one pen, one child and one teacher can
+                                change the world....</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-music-note-beamed fs-1  font-weight-normal text-primary mb-3"
+                            style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class=" font-weight-bold " style="font-family: Handlee, cursive;">Music and Dance</h4>
+                            <p class="m-0  text-muted">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                                lorem amet elitr vero...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-easel2 fs-1  font-weight-normal text-primary mb-3" style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class="  font-weight-bold " style="font-family: Handlee, cursive;">Arts and Crafts</h4>
+                            <p class="m-0  text-muted">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                                lorem amet elitr vero...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-hospital fs-1  font-weight-normal text-primary mb-3"
+                            style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class=" font-weight-bold " style="font-family: Handlee, cursive;">Healthy food</h4>
+                            <p class="m-0  text-muted">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                                lorem amet elitr vero...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-pencil-square fs-1  font-weight-normal text-primary mb-3"
+                            style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class=" font-weight-bold " style="font-family: Handlee, cursive;">Educational Tour</h4>
+                            <p class="m-0  text-muted">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                                lorem amet elitr vero...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="bi bi-wallet fs-1  font-weight-normal text-primary mb-3" style="color: #00394f;"></i>
+                        <div class="pl-4">
+                            <h4 class=" font-weight-bold " style="font-family: Handlee, cursive;">Safe Transportation
+                            </h4>
+                            <p class="m-0  text-muted">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                                lorem amet elitr vero...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start End-->
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" style="background-color: #eee;">
+                    <img src="../images/c1.svg" style="background-color: #eee;" alt="">
+                    
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-title pr-5">
+                        <span class="pr-1 fs-4" style="color: #17a2b8;">---------LEARN ABOUT US --------</span>
+                    </p>
+                    <h1 class="mb-4 font-weight-bold " style="color: #00394f;font-family: Handlee, cursive;">Best School
+                        For Your Kids</h1>
+                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor</p>
+                    <div class="row pt-2 pb-4">
+                        <div class="col-lg-4 col-md-4 ms-3">
+                            <img src="../images/ayush.jpeg" class="img-fluid rounded" alt="">
+                        </div>
+                        <div class="col-lg-5 col-md-8">
+                            <ul class="list-inline m-0">
+                                <li class="py-2 border-top border-bottom">
+                                    <i class="fa fa-check  text-primary  font-weight-normal  font-weight-bold mr-3"
+                                        style="color: #00394f;"></i>Labore eos amet dolor amet diam
+                                </li>
+                                <li class="py-2 border-top border-bottom">
+                                    <i class="fa fa-check  text-primary text-primary  font-weight-normal  font-weight-bold mr-3"
+                                        style="color: #00394f;"></i>Etsea et sit dolor amet ipsum
+                                </li>
+                                <li class="py-2 border-top border-bottom">
+                                    <i class="fa fa-check  text-primary text-primary  font-weight-normal  font-weight-bold mr-3"
+                                        style="color: #00394f;"></i>Labore eos amet dolor amet diam
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="" class="btn ms-5  mt-2 py-2 px-4"
+                        style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #17a2b8;">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Start End -->
+    <!-- Class Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section px-5">
+                    <span class="px-2 fs-4" style="color: #17a2b8;">--------CLASS DETAILS--------</span>
+                </p>
+                <p class="mb-4 font-weight-bold fs-1" style="font-family: Handlee, cursive; color: #00394f;">Classes for
+                    Your Kids</p>
+            </div>
+            <div class="row my-1">
+                <% course.forEach(val=>{ %>
+                    <div class="col-lg-3  mx-auto">
+                        <div class="card border-0 bg-light shadow-lg  pb-2">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.veQLWaxIFTnvPOdD0pcEkQHaEK&pid=Api&P=0&w=338&h=190"
+                                alt="" class="card-img-top ">
+                            <div class="card-body text-center ">
+                                <h4 class="card-title font-weight-bold   fs-3  "
+                                    style="margin-left: 65px;font-family: Handlee, cursive; color: #00394f;">
+                                    <%= val.Course_name %>
+                                </h4>
+                                <p class="card-text text-center my-0">Let us remember: One book, one pen, one child and one teacher can
+                                    change the world....</p>
+                            </div>
+                            <div class="card-footer bg-transparent ">
+                                <div class="row border-bottom">
+                                    <div class="col-6 text-right border-right"><strong>Age of Kids</strong></div>
+                                    <div class="col-6 ">
+                                        <%= val.age_student %> Years
+                                    </div>
+                                </div>
+                                <div class="row border-bottom">
+                                    <div class="col-6  text-right border-right"><strong>Total Seats</strong></div>
+                                    <div class="col-6 ">40 Seats</div>
+                                </div>
+                                <div class="row border-bottom">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                    <div class="col-6 py-1 small">08:00 - 10:00</div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
+                                    <div class="col-6 py-1 small">₹ <%= val.price %> / Month</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- Class Start End-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <img src="../images/homegif.svg"  style="width: 100%;height: 500px; animation-delay: 0ms;">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center mt-3 pb-2 ">
+                <p class="section px-5">
+                    <span class="px-2 fs-4" style="color: #17a2b8;">--------CLASS DETAILS--------</span>
+                </p>
+                <p class="mb-4 font-weight-bold fs-1" style="font-family: Handlee, cursive; color: #00394f;">Classes for
+                    Your Kids</p>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Registration Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <p class="section-title pr-5 fs-4"><span class="pr-2" style="color: #17a2b8;">Book A Seat</span></p>
+                    <h1 class="mb-4 font-weight-bold fs-1" style="font-family: Handlee, cursive; color: #00394f;">Book A
+                        Seat For Your Kid</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum doloremque dolorem
+                        corrupti ullam quasi veritatis! Qui tempore sapiente, iusto in repellendus earum dicta
+                        reiciendis quos. Adipisci eligendi nemo amet.</p>
+                    <ul class="list-inline m-0">
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Labore eos amet dolor amet diam
+                        </li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor amet ipsum</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.
+                        </li>
+                    </ul>
+                    <a href="/student/applyform" class="btn  mt-2 py-2 px-4"
+                        style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #17a2b8;">Register
+                        for Admission</a>
+                </div>
+                <div class="col-lg-5 ">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header  shadow-lg text-center p-4" style="background-color: #00394f;">
+                            <h2 class="text-white m-0 font-weight-bold border-bottom "
+                                style="font-family: Handlee, cursive; color: #00394f;">Register for Admission </h2>
+                        </div>
+                        <div class="card-body rounded-bottom  " style="background-color: #17a2b8;">
+                            <form action="" method="post", enctype="multipart/form-data" py-0 my-0>
+                                <div class="card-body">
+                                  <div class="row">
+                    
+                                    <div class="form-group col">
+                                      <label for="">First Name</label>
+                                      <input type="text" , name="first_name" class="form-control" 
+                                        placeholder="Class Admission fee">
+                                    </div>
+                                    <div class="form-group col">
+                                      <label for="">Last Name</label>
+                                      <input type="text" , name="last_name" class="form-control" 
+                                        placeholder="Class Admission fee">
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="form-group col">
+                                      <label for="">Father Name</label>
+                                      <input type="text" , name="father_name" class="form-control" 
+                                        placeholder="Class Monthly fee">
+                                    </div>
+                                    <div class="form-group col">
+                                      <label for="">Mother Name</label>
+                                      <input type="text" , name="mother_name" class="form-control" 
+                                        placeholder="Class Extera fee">
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="row">
+                                    <div class="form-group col">
+                                      <label for="">DOB</label>
+                                      <input type="date" , name="dob" class="form-control" 
+                                        placeholder="Class Extera fee">
+                                    </div>
+                                    <div class="mb-3 col">
+                                      <label for="">Course</label>
+                                      <select name="course_id" , id="" class="form-control">
+                                        <% course.forEach(val=>{ %>
+                                          <!-- <td><%=val.address %></td> -->
+                                          <option value="<%= val._id  %>">
+                                            <%=val.Course_name %>
+                                          </option>
+                                          <% }); %>
+                                      </select>
+                    
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="form-group col">
+                                      <label for="">mobile</label>
+                                      <input type="number" , name="mobile" class="form-control" 
+                                        placeholder="Class Extera fee">
+                                    </div>
+                                    <div class="form-group col">
+                                      <label for="">email</label>
+                                      <input type="email" , name="email" class="form-control" 
+                                        placeholder="Class Books fee">
+                                    </div>
+                                  </div>
+                                  <div class="row my-1">
+                                    <div class="form-group col-6">
+                                        <label for="">Gender</label>
+                                        <div class="mb-1 row px-3 bg-light rounded py-1 d-flex border border-1">
+                                            <div class="col-4 px    -0">
+                                                <input type="radio" name="gender" value="male"
+                                                    class="me-3 form-check-input ">
+                                                <label for="" class="me-5 form-check-label">Male</label>
+                                            </div>
+                                            <div class="col-5 px    -0">
+                                                <input type="radio" name="gender" value="female"
+                                                    class="me-3 form-check-input ">
+                                                <label for="" class="me-2 form-check-label">Female</label>
+                                            </div>
+                                            <div class="col-3 px    -0">
+                                                <input type="radio" name="gender" value="other"
+                                                    class="me-3 form-check-input ">
+                                                <label for="" class="me-2 form-check-label">Other</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="">Password</label>
+                                        <input type="password" , name="password" class="form-control"
+                                             placeholder="Pleace enter Password">
+                                    </div>
+                                </div>
+                                  <!--------------------- ----------------------------------------------------- -->
+                    
+                    
+                                  <!--------------------- ----------------------------------------------------- -->
+                                  <div class="row">
+                                    <div class="form-group col-3">
+                                        <label for="">Image</label>
+                                        <input type="file" , name="image" 
+                                           class="form-control text-sm">
+                                      </div>
+                                      <div class="form-group col-8 ms-1">
+                                        <label for="">address</label>
+                                        <textarea name="address"  class="form-control" placeholder="Class Extera fee"
+                                          cols="20" rows=""></textarea>
+                                      </div>
+                                  </div>
+                    
+                                </div>
+                                <!-- /.card-body -->
+                    
+                                  <button type="submit" class="btn btn w-100 mt-0" style="color: #fff;border-color: #00394f;border-radius: 45px;background-color: #00394f;">Submit</button>
+                              </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Registration Start End -->
+
+
+    <!-- blog -start----- -->
+    <div class="container-fluid pt-5 mb-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2 fs-4" style="color: #17a2b8;">------------LATEST
+                        BLOG---------</span></p>
+            </div>
+            <h1 class="mb-4 text-center font-weight-bold fs-1" style="font-family: Handlee, cursive; color: #00394f;">
+                Latest Articles From Blog</h1>
+        </div>
+        <div class="row mt-5 pb-3">
+            <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="card border-0 shadow-sm mb-2" style="background-color: #eee;">
+                    <img src="../images/spid.jpg" alt="" class="card boder-0 shadow-lg mb-2">
+                    <div class="card-body  text-center p-4" style="background-color: #eee;">
+                        <h4 class="mb-4 font-weight-bold fs-4" style="font-family: Handlee, cursive; color: #00394f;">
+                            Dia amet eos at eos</h4>
+                        <p>Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                        <a href="/student/applyform" class="btn  mt-2 py-2 px-4"
+                            style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #17a2b8;">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="card border-0 shadow-sm mb-2" style="background-color: #eee;">
+                    <img src="../images/badman (2).jpg" alt="" class="card boder-0 shadow-lg mb-2">
+                    <div class="card-body  text-center p-4" style="background-color: #eee;">
+                        <h4 class="mb-4 font-weight-bold fs-4" style="font-family: Handlee, cursive; color: #00394f;">
+                            Dia amet eos at eos</h4>
+                        <p>Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                        <a href="/student/applyform" class="btn  mt-2 py-2 px-4"
+                            style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #17a2b8;">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="card border-0 shadow-sm mb-2" style="background-color: #eee;">
+                    <img src="../images/hulk.jpg" alt="" class="card boder-0 shadow-lg mb-2">
+                    <div class="card-body  text-center p-4" style="background-color: #eee;">
+                        <h4 class="mb-4 font-weight-bold fs-4" style="font-family: Handlee, cursive; color: #00394f;">
+                            Dia amet eos at eos</h4>
+                        <p>Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                        <a href="/student/applyform" class="btn  mt-2 py-2 px-4"
+                            style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #17a2b8;">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog -start end----- -->
+
+    <!-- foot of Page -->
+    <%- include('footer.ejs') %>
+
+    <!-- foot of Page End -->
+    <a href="#" class="btn btn-primary border-2 small p-2 back-to-top" style="color: #fff;border-color: #17a2b8;border-radius: 45px;background-color: #00394f;display: inline;"><i class="bi bi-chevron-double-up"></i></a>
+
+</body>
+
+</html>

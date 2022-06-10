@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('./layout/common/header.ejs') %>
+        <%- include('./layout/common/nav.ejs') %>
+        <div class="content-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">DataTable with default features</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped small">
+                <thead>
+                    <th>Student id</th>
+                    <th>Student name</th>
+                    <th>Father name</th>
+                    <th>Mother name</th>
+                    <!-- <th>Age</th> -->
+                    <th>Dob</th>
+                    <th>Gender</th>
+                    <th>Image</th>
+                    <th>Roll no.</th>
+                    <th>class</th>
+                    <th>class teacher</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                    <!-- <th>Status</th> -->
+                </tr>
+                </thead>
+                <tbody>
+                <% student.forEach(val=>{ %>
+                <tr>
+                    <td><%=val.id %></td>
+                    <td><%=val.first_name %> <%=val.last_name %></td>
+                    <td><%=val.father_name %></td>
+                    <td><%=val.mother_name %></td>
+                    <!-- <td><%=val.age %></td> -->
+                    <td><%=val.dob %></td>
+                    <td><%=val.gender %></td>
+                    <!-- <td><img src="<%=val.image %>" style="height: 50px; width: 60px;"  alt=""></td> -->
+                    <td><img src="/<%= val.image %>" height="50" alt=""></td>
+                    <td><%=val.roll %></td>
+                    <td><%=val.course_id.Course_name %></td>
+                    <td><%=val.course_id.teacher_id %></td>
+                    <td><%=val.mobile %></td>
+                    <td><%=val.email %></td>
+                    <td><%=val.address %></td>
+                    <td>
+                        <a href="/admin/edit-student/<%=val._id %>" class="btn btn-danger "><div class="bi bi-eye"></div></a>
+                    </td>
+                </tr>
+                <% }); %> 
+                </tbody>
+                
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+       </div>
+       <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+</html>
+
+

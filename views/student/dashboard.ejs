@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('../admin/layout/common/student_header.ejs') %>
+      <%- include('../admin/layout/common/student_nav.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>This is student Dashboard</h1>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><%= student[0].first_name %> <%= student[0].last_name %></li>
+                  </ol>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+
+
+          <!-- --------------------------------------------------------------------------------------- -->
+          <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <h3>150</h3>
+    
+                    <p>New Orders</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-bag"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                  <div class="inner">
+                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+    
+                    <p>Bounce Rate</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                  <div class="inner">
+                    <h3>44</h3>
+    
+                    <p>User Registrations</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                  <div class="inner">
+                    <h3>65</h3>
+    
+                    <p>Unique Visitors</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-5 mx-auto">
+                <div class="w-2/5 mx-auto ">
+                  <form>   
+                      <label for="search" class="mb-2 text-sm font-medium  ">Your Roll Number</label>
+                      <div class="relative">
+                          
+                          <input name="roll_number"  type="search" id="search" placeholder="Enter Your Roll Number Here">
+                          <button id="student_button" type="submit" >Add Your Attendence</button>
+                      </div>
+                  </form>
+               </div>
+            <!-- /.row -->
+          <!-- --------------------------------------------------------------------------------------- -->
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) -->
+  </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+<!-- <div class="row">
+  <div class="col-3 mx-auto"><div class="card card-success card-outline">
+    <div class="card-header">
+      <h3 class="card-title">
+        <i class="fas fa-edit"></i>
+        SweetAlert2 Examples
+      </h3>
+    </div>
+    <div class="card-body">
+      <button type="button" class="btn btn-success swalDefaultSuccess">
+        Launch Success Toast
+      </button>
+</div>
+</div></div>
+</div> -->
+
+
+  <!-- -----------------------------------------Attendence--------------------------------------------------- -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+     <script>
+         toastr.options = {
+        "closeButton": true,
+        "timeOut": "0",
+        "extendedTimeOut": "0"
+    };
+        $(document).on('click','#student_button', function (e) {
+            e.preventDefault();
+            var student_id = $('input[name="roll_number"]').val();
+            if(!!student_id){
+                $.ajax({
+                    'url': '/student/dashboard',
+                    'data': {
+                        "student_id": student_id,
+                    },
+                    'method': 'POST',
+                    'success': function (res) {
+                        console.log(res);
+                        toastr.success('Your Attendence had been Submitted for'+ ' ' + res.date, 'SuccessFully');
+                    },
+                    'error': function (err) {
+                        console.log(err);
+                    }
+                });
+            }
+            else {
+                toastr.info('Enter Your Roll Number and Try.', 'Invalid');
+            }
+           
+        });
+    </script>
+    </div>
+  </div>
+  </div> 
+  <!-- ----------------------------------------------Attendence End---------------------------------------------- -->
+
+  <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+
+</html>

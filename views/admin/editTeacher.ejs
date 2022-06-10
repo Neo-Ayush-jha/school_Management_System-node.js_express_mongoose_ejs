@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('./layout/common/header.ejs') %>
+      <%- include('./layout/common/nav.ejs') %>
+        <div class="content-wrapper">
+
+
+
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Select2 (Default Theme)</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Teacher name</label>
+                      <input type="text" , name="t_name" , value=" <%=teacher[0].t_name %> " class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                      <label for="">Mobile</label>
+                      <input type="number" , name="t_mobile" , value="<%= teacher[0].t_mobile %>" class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Age</label>
+                      <input type="number" , name="t_age" , value="<%= teacher[0].t_age %>" class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                      <label for="">email</label>
+                      <input type="email" , name="t_email" , value="<%= teacher[0].t_email %>" class="form-control">
+                      </select>
+                    </div>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+                <h5>Custom Color Variants</h5>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">Salary</label>
+                      <input type="number" , name="t_salary" , value="<%= teacher[0].t_salary %>" class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">Dob</label>
+                      <input type="text" , name="t_dob" , value="<%= teacher[0].t_dob %>" class="form-control">
+                    </div>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">gender</label>
+                      <input type="text" , name="t_gender" , value="<%= teacher[0].t_gender %>" class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">Course</label>
+                      <input type="text" , name="course_id" , value="<%= teacher[0].course_id %>"
+                        class="form-control">
+                    </div>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">Address</label>
+                      <input type="text" , name="t_address" , value=" <%=teacher[0].t_address %> " class="form-control">
+                    </div>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="">Password</label>
+                      <!-- <input type="password" , name="t_password" , value="<%= teacher[0].t_password %>"
+                        class="form-control"> -->
+                        <input type="password" , name="t_password" , value=" <%=teacher[0].t_password %> " class="form-control">
+
+                    </div>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <div class="mb-3">
+                  <input type="submit" , name="submit" class="btn btn-success w-100">
+                </div>
+                <!-- /.col -->
+              
+            <!-- /.row -->
+            </form>
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and
+            information about
+            the plugin.
+          </div>
+        </div>
+  </div>
+  <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+
+</html>

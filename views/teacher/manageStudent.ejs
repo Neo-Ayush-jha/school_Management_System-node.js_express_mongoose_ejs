@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('../admin/layout/common/header.ejs') %>
+        <%- include('../admin/layout/common/teacher_nav.ejs') %>
+        <div class="content-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">DataTable with default features</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped small">
+                <thead>
+                    <th>Student name</th>
+                    <th>Father name</th>
+                    <th>Mother name</th>
+                    <!-- <th>Age</th> -->
+                    <th>Teacher name</th>
+                    <th>Gender</th>
+                    <th>Roll no.</th>
+                    <th>class</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Paper 1</th>
+                    <th>Paper 2</th>
+                    <th>Paper 3</th>
+                    <th>Paper 4</th>
+                    <th>Paper 5</th>
+                    <th>Paper 6</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% student.forEach(val=>{ %>
+                <tr>
+                    <td><%=val.first_name %> <%=val.last_name %></td>
+                    <td><%=val.father_name %></td>
+                    <td><%=val.mother_name %></td>
+                    <!-- <td><%=val.age %></td> -->
+                    <td><%=val.dob %></td>
+                    <td><%=val.gender %></td>
+                    <td><%=val.roll %></td>
+                    <td><%=val.Course_name %></td>
+                    <td><%=val.mobile %></td>
+                    <td><%=val.email %></td>
+                    <td><%=val.address %></td>
+                    <td><%=val.paper_1 %></td>
+                    <td><%=val.paper_2 %></td>
+                    <td><%=val.paper_3 %></td>
+                    <td><%=val.paper_4 %></td>
+                    <td><%=val.paper_5 %></td>
+                    <td><%=val.paper_6 %></td>
+                    <td>
+                        <a href="/teacher/edit-student/<%=val._id %>" class="btn btn-danger">Edit</a>
+                    </td>
+                </tr>
+                <% }); %> 
+                </tbody>
+                
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+       </div>
+       <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+</html>
+
+

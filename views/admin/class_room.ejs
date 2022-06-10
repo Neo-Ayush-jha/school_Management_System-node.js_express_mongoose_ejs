@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('./layout/common/header.ejs') %>
+            <%- include('./layout/common/nav.ejs') %>
+                <div class="content-wrapper">
+
+
+
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Asset Entry</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped small">
+                              <thead>
+                                  <th>Student name</th>
+                                  <th>Student image</th>
+                                  <th>Roll no.</th>
+                                  <th>Class</th>
+                                  <th>Paper 1</th>
+                                  <th>Paper 2</th>
+                                  <th>Paper 3</th>
+                                  <th>Paper 4</th>
+                                  <th>Paper 5</th>
+                                  <th>Paper 6</th>
+                                  <th>Action</th>
+                                  <!-- <th>Status</th> -->
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <% student.forEach(val=>{ %>
+                              <tr>
+                                  <td><%=val.first_name %> <%=val.last_name %></td>
+                                  <td><img src="/<%= val.image %>" height="50" alt=""></td>
+                                  <td><%=val.roll %></td>
+                                  <td><%=val.course_id.Course_name %></td>
+                                  <td><%=val.course_id.course_1 %></td>
+                                  <td><%=val.course_id.course_2 %></td>
+                                  <td><%=val.course_id.course_3 %></td>
+                                  <td><%=val.course_id.course_4 %></td>
+                                  <td><%=val.course_id.course_5 %></td>
+                                  <td><%=val.course_id.course_6 %></td>
+                                  <td>
+                                      <a href="/admin/edit-student/<%=val._id %>" class="btn btn-danger "><div class="bi bi-eye"></div></a>
+                                  </td>
+                              </tr>
+                              <% }); %> 
+                              </tbody>
+                              
+                            </table>
+                          </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and
+                            information about
+                            the plugin.
+                        </div>
+                    </div>
+                </div>
+                <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+
+</html>

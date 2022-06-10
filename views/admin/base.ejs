@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <%- include('./layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('./layout/common/header.ejs') %>
+      <%- include('./layout/common/nav.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>General Form</h1>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">General Form</li>
+                  </ol>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- left column -->
+                <div class="col-md-10 mx-auto">
+                  <!-- general form elements -->
+                  <div class="card shadow card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Apply form or Admission From for student</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form action="" method="post">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Class name</label>
+                            <input type="text" class="form-control" name="class_name" id="exampleInputEmail1"
+                              placeholder="Class name">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">First Name</label>
+                            <input type="text" , name="first_name" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Admission fee">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Last Name</label>
+                            <input type="text" , name="last_name" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Admission fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">Father Name</label>
+                            <input type="text" , name="father_name" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Monthly fee">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Mother Name</label>
+                            <input type="text" , name="mother_name" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">age</label>
+                            <input type="number" , name="age" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">DOB</label>
+                            <input type="date" , name="dob" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">class</label>
+                            <input type="text" , name="class" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">mobile</label>
+                            <input type="number" , name="mobile" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Extera fee">
+                          </div>
+                          <div class="form-group col">
+                            <label for="">email</label>
+                            <input type="email" , name="email" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="">Gender</label>
+                        <div class="mb-1 col px-3 rounded py-1 d-flex border border-1">
+                          <div class="mx-3">
+                            <input type="radio" name="gender" value="male" class="me-5 form-check-input me-1">
+                            <label for="" class="me-5 form-check-label">Male</label>
+                          </div>
+                          <div class="mx-3">
+                            <input type="radio" name="gender" value="female" class="me-5 form-check-input me-1">
+                            <label for="" class="me-5 form-check-label">Female</label>
+                          </div>
+                          <div class="mx-3">
+                            <input type="radio" name="gender" value="other" class="me-5 form-check-input me-1">
+                            <label for="" class="me-5 form-check-label">Other</label>
+                          </div>
+                        </div>
+                          </div>
+                          <div class="form-group col">
+                            <label for="">password</label>
+                            <input type="password" , name="password" class="form-control" id="exampleInputPassword1"
+                              placeholder="Class Books fee">
+                          </div>
+                        </div>
+                        
+
+                        <div class="form-group col">
+                          <label for="">address</label>
+                            <textarea name="address" id="exampleInputPassword1" class="form-control" placeholder="Class Extera fee" cols="30" rows=""></textarea>
+                        </div>
+
+                      </div>
+                      <!-- /.card-body -->
+
+                      <div class="card-footer ">
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card -->
+
+                  <!-- /.card -->
+
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+
+
+
+                <!-- input states -->
+
+
+
+
+
+
+
+                <div class="form-group">
+                </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) -->
+  </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+
+  </div>
+  <%- include('./layout/common/footer.ejs') %>
+    </div>
+    <%- include('./layout/common/downlink.ejs') %>
+</body>
+
+</html>

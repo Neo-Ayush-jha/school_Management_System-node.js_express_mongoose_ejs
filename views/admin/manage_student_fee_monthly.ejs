@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('./layout/common/student_header.ejs') %>
+    <%- include('./layout/common/student_nav.ejs') %>
+    <div class="content-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">DataTable with default features</h3>
+        </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped small">
+                      <thead>
+                        <th>Roll no.</th>
+                        <th>Student name</th>
+                        <th>Student Class</th>
+                        <th>Fee</th>
+                        <th>dob</th>
+                        <th>doj</th>
+                        <th>Payment Months</th>
+                        <th>Status</th>
+                        
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% MonthlyFee.forEach(val=>{ %>
+                      <tr>
+                        <td><%=val.student_id.roll %> </td>
+                        <td><%=val.student_id.first_name %> </td>
+                        <td><%=val.course_id.Course_name %> </td>
+                        <td>₹ <%=val.total_amount %></td>
+                        <td><%=val.student_id.dob %></td>
+                        <td><%=val.student_id.date_of_join  %> </td>
+                        <td><%=val.month %></td>
+                        <td> 
+                          <% if(val.p_status == '0') { %> 
+                              <a href="#" class="btn btn-danger" id="rzp-button1" data-student-id="<%= val.student_id.id %>" data-class-id="<%= val.student_id.class %>" data-total-amount="<%= val.total_amount %>" data-monthly-fee="<%= val.id %>">
+                                  Pay
+                              </a>
+                          <% } else { %> 
+                              <a href="" class="btn btn-success disabled">
+                                  Paid
+                              </a>
+                          <% } %> 
+                       </td>
+                      </tr>
+                      <% }); %> 
+                      </tbody>
+                      
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+             </div>
+          </div>          
+       </div>
+       <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+            $(document).on('click','#rzp-button1', function (e) {
+              e.preventDefault();
+              var student_id = $(this).attr('data-student-id');
+              var class_id = $(this).attr('data-class-id');
+              var total_amount = $(this).attr('data-total-amount');
+              var monthly_fee_id = $(this).attr('data-monthly-fee');
+                  $.ajax({
+                        'url': '/student/monthly/payment',
+                        'data': {
+                            "student_id": student_id,
+                            "class_id": class_id,
+                            "total_amount" : total_amount,
+                            "monthly_fee_id" : monthly_fee_id,
+                        },
+                        'method': 'POST',
+                        'success': function (res) {
+                            console.log(res);
+                            var options = {
+                                "key": "rzp_test_ISOwomsQzcDDQt",
+                                "currency": "INR",
+                                "amount": total_amount * 100,
+                                "name": "GuruKul MahaVidyale",
+                                "description": "This is for first time addmission",
+                                "prefill.name": "Ayush Kumar",
+                                "prefill.email": "ayush9334kumar@gmail.com",
+                                "handler": function (response) {
+                                    $('.loading').css('opacity', 0.5).fadeIn(300);
+                                    $.ajax({
+                                        'url': '/admin/student/payement',
+                                        'data': {
+                                            "razorpay_payment_id": response.razorpay_payment_id,
+                                            "razorpay_order_id": response.razorpay_order_id,
+                                            "razorpay_signature": response.razorpay_signature,
+                                            "order_id" : res
+                                        },
+                                        'method': 'POST',
+                                        'success': function (res) {
+                                            $('.loading').fadeOut(300);
+                                            console.log(res);
+                                        },
+                                        'error': function (err) {
+                                            console.log(err);
+                                        }
+                                    });
+                                }
+                            };
+                            rzp1 = new Razorpay(options);
+                            rzp1.open();
+                        },
+                        'error': function (err) {
+                            console.log(err);
+                        }
+                    });
+            });
+    </script>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+    
+</body>
+</html>

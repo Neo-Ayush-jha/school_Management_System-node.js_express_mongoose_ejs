@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello</title>
+  <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%- include('../admin/layout/common/header.ejs') %>
+      <%- include('../admin/layout/common/teacher_nav.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1>General Form</h1>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">General Form</li>
+                  </ol>
+                </div>
+              </div>
+            </div><!-- /.container-fluid -->
+          </section>
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- left column -->
+                <div class="col-md-10 mx-auto">
+                  <!-- general form elements -->
+                  <div class="card shadow card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Apply form or Admission From for student</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form action="/teacher/notificationForm" method="post" >
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="">Notice</label>
+                                <input type="text", name="notice" class="form-control">
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="">Teacher name</label>
+                                <select name="teacher_id", id="" class="form-control">
+                                    <% teacher.forEach(val=>{ %>
+                                                <!-- <td><%=val.address %></td> -->
+                                        <option value="<%= val._id  %>"><%=val.t_name %></option>
+                                    <% }); %> 
+                                </select>
+        
+                            </div>
+                        </div>
+                        <div class="mb-3 col">
+                            <input type="submit", name="submit" class="btn btn-success w-100">
+                        </div>
+                    </form>
+                  </div>
+                  <!-- /.card -->
+
+                  <!-- /.card -->
+
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+
+
+
+                <!-- input states -->
+
+
+
+
+
+
+
+                <div class="form-group">
+                </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) -->
+  </div>
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+
+  </div>
+  <%- include('../admin/layout/common/footer.ejs') %>
+    </div>
+    <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+
+</html>

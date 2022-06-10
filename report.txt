@@ -1,0 +1,60 @@
+// async function manageStudents(req,res){
+    //     var id= req.session.teacher_id;
+    //     var data = await StudentModel.aggregate(
+    //         [
+    //             {
+    //                 $lookup:{
+    //                     from:"courses",
+    //                     localField:"course_id",
+    //                     foreignField:"_id",
+    //                     as:"courses",
+    //                 }
+    //             },
+    //             {
+    //                 $unwind: "$courses",
+    //             },
+    //             {
+    //                 $lookup: {
+    //                     from: "teachers",
+    //                     localField: "teacher_id",
+    //                     // foreignField: "course_id",
+    //                     // foreignField: "_id",
+    //                     foreignField: "id",
+    //                     as: "teachers",
+    //                 }
+    //             },
+    //             {
+    //                 $unwind: "$teachers",
+    //             },
+    //             {
+    //             $project: {
+    //                 dob:'$teachers.t_name',
+    //                 _id:'$_id',
+    //                 courses_id:'$courses._id',
+    //                 price:'$courses.price',
+    //                 first_name:'$first_name',
+    //                 last_name:'$last_name',
+    //                 father_name:'$father_name',
+    //                 mother_name:'$mother_name',
+    //                 gender:'$gender',
+    //                 roll:'$roll',
+    //                 image:'$image',
+    //                 mobile:'$mobile',
+    //                 email:'$email',
+    //                 address:'$address',
+    //                 Course_name:'$courses.Course_name',
+    //                 paper_1:'$paper_1',
+    //                 paper_2:'$paper_2',
+    //                 paper_3:'$paper_3',
+    //                 paper_4:'$paper_4',
+    //                 paper_5:'$paper_5',
+    //                 paper_6:'$paper_6',
+    //                 // t_id:'$teachers._id',
+    //             }
+    //             },
+                
+    //         ]
+    //     );
+    //     res.render("teacher/manageStudent",{"student": data});
+    //     console.log(data);
+    // }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+    <%- include('../admin/layout/common/link.ejs')%>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <%- include('../admin/layout/common/student_header.ejs') %>
+            <%- include('../admin/layout/common/student_nav.ejs') %>
+                <div class="content-wrapper">
+                    <div class="row ">
+                        <div class="col-8    mx-auto">
+                            <div class="card shadow mt-3">
+                                <div class="card-header">
+                                    <h3 class="card-title ">
+                                        <%= studentDetail[0].first_name %>
+                                            <%= studentDetail[0].last_name %> Detals
+                                    </h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped ">
+                                        <tr>
+                                            <th>Student img</th>
+                                            <td>
+                                                <img src="/<%= studentDetail[0].image %>" height="50" alt="">
+                                                <!-- <%= studentDetail[0].image %> -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student name</th>
+                                            <td>
+                                                <%= studentDetail[0].first_name %>
+                                                    <%= studentDetail[0].last_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Father name</th>
+                                            <td>
+                                                <%= studentDetail[0].father_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student mother name</th>
+                                            <td>
+                                                <%= studentDetail[0].mother_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student class name</th>
+                                            <td>
+                                                <%= studentDetail[0].course_id.Course_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student class name</th>
+                                            <td>
+                                                <%= studentDetail[0].course_id.teacher_id %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student DOB</th>
+                                            <td>
+                                                <%= studentDetail[0].dob %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student gender</th>
+                                            <td>
+                                                <%= studentDetail[0].gender %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Student date of joining</th>
+                                            <td>
+                                                <%= studentDetail[0].date %>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="table table-bordered  table-striped " style="border: 2px solid red;">
+                                        <tr style="border: 2px solid red;">
+                                            <th>Maths</th>
+                                            <th>Science</th>
+                                            <th>SSt</th>
+                                            <th>English</th>
+                                            <th>Hindi</th>
+                                            <th>Computer</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <%= studentDetail[0].paper_1 %>
+                                            </td>
+                                            <td>
+                                                <%= studentDetail[0].paper_2 %>
+                                            </td>
+                                            <td>
+                                                <%= studentDetail[0].paper_3 %>
+                                            </td>
+                                            <td>
+                                                <%= studentDetail[0].paper_4 %>
+                                            </td>
+                                            <td>
+                                                <%= studentDetail[0].paper_5 %>
+                                            </td>
+                                            <td>
+                                                <%= studentDetail[0].paper_6 %>
+                                            </td>
+
+                                        </tr>
+                                        <tr style="border: 2px solid red;">
+                                            <h3 class="border border-2 bg-info text-center bold">Student Result :</h3>
+                                        <tr >
+                                            <th rowspan="2" class="text-center p-5" style="background-color: #eee;border: 2px solid red;">Total</th>
+                                            <td style="background-color:#eee;border: 2px solid red;">600</td>
+                                            <th colspan="2" rowspan="2"></th>
+                                            <th rowspan="2" class="text-center p-5" style="background-color: #eee;border: 2px solid red;">Percentage</th>
+                                            <td style="background-color:#eee;border: 2px solid red;">100%</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white;border: 2px solid red;">
+                                                <%= studentDetail[0].paper_1+studentDetail[0].paper_2+studentDetail[0].paper_3+studentDetail[0].paper_4+studentDetail[0].paper_5+studentDetail[0].paper_6
+                                                    %>
+                                            </td>
+                                            <td  style="background-color:white"> 
+                                                <%= 100 * (
+                                                    studentDetail[0].paper_1+studentDetail[0].paper_2+studentDetail[0].paper_3+studentDetail[0].paper_4+studentDetail[0].paper_5+studentDetail[0].paper_6
+                                                    )/600  %> %
+                                            </td>
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                    <a href="" class="btn btn border-primary border   border-2 d-print-none p-3 mt-3" onClick="window.print()">Print Out</a>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    <%- include('../admin/layout/common/footer.ejs') %>
+        </div>
+        <%- include('../admin/layout/common/downlink.ejs') %>
+</body>
+
+</html>
